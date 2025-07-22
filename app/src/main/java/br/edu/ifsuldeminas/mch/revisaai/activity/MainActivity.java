@@ -196,10 +196,13 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
         } else if (id == R.id.action_stats) {
             startActivity(new Intent(this, StatsActivity.class));
             return true;
-        } else if (id == R.id.action_goals) { // NOVO: Lidar com o clique em "Minhas Metas"
+        } else if (id == R.id.action_goals) {
             startActivity(new Intent(this, GoalListActivity.class));
             return true;
-        }else if (id == R.id.action_logout) {
+        } else if (id == R.id.id_quotes) { // NOVO: Lidar com o clique em "Citação do Dia"
+            startActivity(new Intent(this, QuoteActivity.class));
+            return true;
+        } else if (id == R.id.action_logout) {
             mAuth.signOut();
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

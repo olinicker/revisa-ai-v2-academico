@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lembretes"
+            android:text="Lembretes de Estudo"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
@@ -39,11 +39,33 @@
             android:id="@+id/switchReminder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ativar lembretes de estudo"
+            android:text="Ativar lembretes diários"
             android:textSize="16sp"
             android:layout_marginTop="8dp"/>
+
+        <!-- Novo campo para exibir e selecionar o horário -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutReminderTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="16dp"
+            android:enabled="false"> <!-- Inicialmente desabilitado, será habilitado com o switch -->
+
+            <TextView
+                android:id="@+id/textViewReminderTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Horário do Lembrete (HH:mm)"
+                android:padding="16dp"
+                android:background="@android:color/transparent"
+                android:drawableEnd="@android:drawable/ic_menu_recent_history"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:textSize="16sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
 </LinearLayout>
-    
