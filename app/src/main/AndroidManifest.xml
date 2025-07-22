@@ -19,13 +19,13 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-        <!--<intent-filter>
-           <action android:name="android.intent.action.MAIN" />
-           <category android:name="android.intent.category.LAUNCHER" />
-       </intent-filter>-->
-   </activity>
+            <!--<intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>-->
+        </activity>
 
-   <!-- Activity da Lista de Flashcards -->
+        <!-- Activity da Lista de Flashcards -->
         <activity
             android:name=".activity.FlashcardListActivity"
             android:exported="false"
@@ -57,7 +57,13 @@
             android:label="Estatísticas"
             android:parentActivityName=".activity.MainActivity" />
 
-
+        <!-- NOVA Activity de Metas -->
+        <activity
+            android:name=".activity.GoalListActivity"
+            android:exported="false"
+            android:label="Minhas Metas"
+            android:parentActivityName=".activity.MainActivity"
+            android:windowSoftInputMode="adjustResize" /> <!-- Adicionado para ajustar o layout com o teclado -->
 
         <activity
             android:name=".activity.LoginActivity"

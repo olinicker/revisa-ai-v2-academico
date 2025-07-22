@@ -10,6 +10,9 @@ public class Goal {
     private String userId;
     @ServerTimestamp
     private Date creationDate;
+    private String category; // Novo campo
+    private String dueDate;  // Novo campo
+    private String priority; // Novo campo
 
     // Construtor vazio é necessário para o Firestore
     public Goal() {}
@@ -52,5 +55,30 @@ public class Goal {
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+
+    // Getters e Setters para os novos campos
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(String dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
     }
 }
