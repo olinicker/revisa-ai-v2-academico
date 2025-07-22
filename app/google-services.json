@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240596714693",
+    "project_id": "revisaai-d3218",
+    "storage_bucket": "revisaai-d3218.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240596714693:android:c0cac9a432a46f68f3dcac",
+        "android_client_info": {
+          "package_name": "br.edu.ifsuldeminas.mch.revisaai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA84J-imH_7LzL6-CjRkrVaw83B0hgq3Wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

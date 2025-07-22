@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RevisaAi"
+        tools:targetApi="31">
+
+        <!-- Activity Principal (Launcher) -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+        <!--<intent-filter>
+           <action android:name="android.intent.action.MAIN" />
+           <category android:name="android.intent.category.LAUNCHER" />
+       </intent-filter>-->
+   </activity>
+
+   <!-- Activity da Lista de Flashcards -->
+        <activity
+            android:name=".activity.FlashcardListActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <!-- Activity de Adicionar/Editar Flashcard -->
+        <activity
+            android:name=".activity.FlashcardAddEditActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.FlashcardListActivity" />
+
+        <!-- Activity de Revisão -->
+        <activity
+            android:name=".activity.ReviewActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.FlashcardListActivity" />
+
+        <!-- Activity de Configurações -->
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false"
+            android:label="Configurações"
+            android:parentActivityName=".activity.MainActivity" />
+
+        <!-- Activity de Estatísticas -->
+        <activity
+            android:name=".activity.StatsActivity"
+            android:exported="false"
+            android:label="Estatísticas"
+            android:parentActivityName=".activity.MainActivity" />
+
+
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="true">
+            <!-- Para tornar esta a tela inicial, mova o intent-filter da MainActivity para cá -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.LoginActivity" />
+
+
+    </application>
+
+</manifest>

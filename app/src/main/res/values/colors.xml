@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores Base do Tema Claro -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Nova Paleta de Cores: Cinza e Laranja -->
+    <color name="dark_gray_primary">#212121</color> <!-- Cinza bem escuro para a AppBar -->
+    <color name="dark_gray_variant">#000000</color> <!-- Preto para a barra de status -->
+    <color name="orange_accent">#FF9800</color>   <!-- Laranja para botões, switches e FAB -->
+</resources>
