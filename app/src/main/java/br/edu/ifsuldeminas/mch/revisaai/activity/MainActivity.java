@@ -190,10 +190,7 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_goals) { // Novo case
-            startActivity(new Intent(this, GoalsActivity.class));
-            return true;
-        } else if (id == R.id.action_settings) {
+        if(id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
         } else if (id == R.id.action_stats) {

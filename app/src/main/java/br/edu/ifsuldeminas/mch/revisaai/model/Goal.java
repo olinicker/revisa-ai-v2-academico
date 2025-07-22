@@ -1,29 +1,19 @@
 package br.edu.ifsuldeminas.mch.revisaai.model;
 
-import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.ServerTimestamp;
 import java.util.Date;
 
 public class Goal {
-    // Exclude para que o Firestore não tente guardar este campo,
-    // pois ele já é o ID do documento.
-    @Exclude
     private String id;
-
     private String description;
     private boolean completed;
     private String userId;
-
-    // Anotação para que o Firestore preencha este campo automaticamente
-    // com a data do servidor no momento da criação.
     @ServerTimestamp
     private Date creationDate;
 
-    // Construtor vazio é obrigatório para o Firestore
+    // Construtor vazio é necessário para o Firestore
     public Goal() {}
 
-    // Getters e Setters
-    @Exclude
     public String getId() {
         return id;
     }
