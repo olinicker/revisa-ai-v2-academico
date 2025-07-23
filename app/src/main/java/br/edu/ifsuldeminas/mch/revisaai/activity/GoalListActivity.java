@@ -131,7 +131,7 @@ public class GoalListActivity extends AppCompatActivity implements GoalAdapter.O
     }
 
     private void showAddEditGoalDialog(final Goal goalToEdit) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this,  R.style.Theme_RevisaAi_Dialog);
         builder.setTitle(goalToEdit == null ? "Adicionar Nova Meta" : "Editar Meta");
 
         // Layout para o diálogo com múltiplos campos

@@ -6,29 +6,51 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp"
+    android:padding="32dp"
+    android:background="@color/background_dark_app"
     tools:context=".activity.RegisterActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Crie sua Conta"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Junte-se ao RevisaAí!"
+        android:textSize="18sp"
+        android:layout_marginBottom="48dp"
+        android:textColor="@color/white"
+        android:alpha="0.8"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="24dp"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
+        <!-- REMOVIDO: app:defaultHintTextColor="@color/text_input_hint" -->
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E-mail"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint"/>
+        <!-- ADICIONADO: android:textColorHint="@color/text_input_hint" -->
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -36,14 +58,25 @@
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:passwordToggleEnabled="true"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="32dp"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
+        <!-- REMOVIDO: app:defaultHintTextColor="@color/text_input_hint" -->
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Senha (mínimo 6 caracteres)"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint"/>
+        <!-- ADICIONADO: android:textColorHint="@color/text_input_hint" -->
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -51,17 +84,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cadastrar"
-        android:padding="12dp"
-        android:textSize="16sp"/>
+        android:paddingVertical="14dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/orange_accent"
+        app:cornerRadius="10dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textViewGoToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Já tem uma conta? Faça login"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:padding="8dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
 </LinearLayout>

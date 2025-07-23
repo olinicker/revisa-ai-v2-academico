@@ -4,35 +4,57 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/background_dark_app">
+
+    <!-- Título do Diálogo (geralmente definido no AlertDialog.Builder) -->
+    <!-- Este LinearLayout é o conteúdo do diálogo, então seu background é o que controlamos -->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextGoalDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descrição da Meta"
+            android:hint="Descri\u00e7\u00e3o da Meta"
             android:inputType="textCapSentences"
-            android:maxLines="3"/>
+            android:maxLines="3"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextGoalCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Categoria (ex: Estudo, Pessoal)"
-            android:inputType="textCapWords"/>
+            android:inputType="textCapWords"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Campo de Data de Vencimento com DatePicker -->
@@ -40,7 +62,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
 
         <TextView
             android:id="@+id/textViewGoalDueDate"
@@ -53,21 +82,32 @@
             android:focusable="false"
             android:clickable="true"
             android:inputType="none"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_input_hint"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Campo de Prioridade com Spinner -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/orange_accent"
+        app:hintTextColor="@color/orange_accent"
+        app:boxBackgroundColor="@color/input_field_background"
+        app:boxCornerRadiusTopStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp">
 
         <Spinner
             android:id="@+id/spinnerGoalPriority"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:spinnerMode="dropdown"/>
+            android:spinnerMode="dropdown"
+            android:backgroundTint="@color/white"/>
+        <!-- O texto selecionado no Spinner é controlado pelo adapter, não diretamente aqui -->
     </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

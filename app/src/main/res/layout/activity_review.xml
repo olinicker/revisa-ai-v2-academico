@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_dark_app"
     tools:context=".activity.ReviewActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,7 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:title="Modo de Revisão"
-            app:titleTextColor="@android:color/white"
+            app:titleTextColor="@color/white"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -26,25 +27,26 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_centerInParent="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp">
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardViewFlashcard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="16dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/input_field_background">
 
             <TextView
                 android:id="@+id/textViewFlashcardContent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="16dp"
+                android:padding="24dp"
                 android:text="Frente do Flashcard"
                 android:textSize="24sp"
-                android:textColor="@android:color/black"/>
+                android:textColor="@color/white"/>
 
         </androidx.cardview.widget.CardView>
     </FrameLayout>
@@ -53,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:padding="16dp"
+        android:padding="24dp"
         android:orientation="horizontal">
 
         <Button
@@ -62,7 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Errei"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@color/dark_gray_primary"
+            app:cornerRadius="10dp"
+            android:textColor="@color/white"
+            android:paddingVertical="14dp"
+            android:textSize="18sp"/>
 
         <Button
             android:id="@+id/buttonCorrect"
@@ -70,8 +77,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Acertei"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="12dp"
+            android:backgroundTint="@color/orange_accent"
+            app:cornerRadius="10dp"
+            android:textColor="@color/black"
+            android:paddingVertical="14dp"
+            android:textSize="18sp"/>
     </LinearLayout>
 
 </RelativeLayout>
-    

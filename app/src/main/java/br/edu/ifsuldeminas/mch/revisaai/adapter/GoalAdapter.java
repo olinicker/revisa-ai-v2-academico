@@ -74,11 +74,13 @@ public class GoalAdapter extends RecyclerView.Adapter<GoalAdapter.GoalViewHolder
             // Define o status e o estilo baseado se a meta está completa
             if (goal.isCompleted()) {
                 textViewGoalStatus.setText("Status: Concluída");
-                textViewGoalStatus.setTextColor(itemView.getContext().getResources().getColor(android.R.color.holo_green_dark));
+                // Usar uma cor que contraste bem com o fundo escuro e indique sucesso
+                textViewGoalStatus.setTextColor(itemView.getContext().getResources().getColor(R.color.orange_accent));
                 textViewGoalDescription.setPaintFlags(textViewGoalDescription.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             } else {
                 textViewGoalStatus.setText("Status: Pendente");
-                textViewGoalStatus.setTextColor(itemView.getContext().getResources().getColor(android.R.color.holo_red_dark));
+                // Usar uma cor que contraste bem com o fundo escuro e indique pendência
+                textViewGoalStatus.setTextColor(itemView.getContext().getResources().getColor(R.color.text_input_hint));
                 textViewGoalDescription.setPaintFlags(textViewGoalDescription.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
             }
 

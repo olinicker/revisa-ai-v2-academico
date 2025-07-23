@@ -119,12 +119,16 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
     }
 
     private void showAddDeckDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // Usa o tema de diálogo personalizado para garantir consistência visual
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_RevisaAi_Dialog);
         builder.setTitle("Adicionar Novo Deck");
 
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         input.setHint("Nome da Matéria");
+        input.setTextColor(getResources().getColor(R.color.white)); // Garante que o texto digitado seja branco
+        input.setHintTextColor(getResources().getColor(R.color.text_input_hint)); // Garante que o hint seja cinza claro
+        input.setBackgroundTintList(getResources().getColorStateList(R.color.orange_accent)); // Adiciona um tint laranja à linha de input
         builder.setView(input);
 
         builder.setPositiveButton("Salvar", (dialog, which) -> {
@@ -144,12 +148,16 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
     }
 
     private void showEditDeckDialog(final Deck deck) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        // Usa o tema de diálogo personalizado para garantir consistência visual
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_RevisaAi_Dialog);
         builder.setTitle("Editar Deck");
 
         final EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         input.setText(deck.getName());
+        input.setTextColor(getResources().getColor(R.color.white)); // Garante que o texto digitado seja branco
+        input.setHintTextColor(getResources().getColor(R.color.text_input_hint)); // Garante que o hint seja cinza claro
+        input.setBackgroundTintList(getResources().getColorStateList(R.color.orange_accent)); // Adiciona um tint laranja à linha de input
         builder.setView(input);
 
         builder.setPositiveButton("Salvar", (dialog, which) -> {
@@ -168,7 +176,8 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
     }
 
     private void showDeleteConfirmDialog(final Deck deck) {
-        new AlertDialog.Builder(this)
+        // Usa o tema de diálogo personalizado para garantir consistência visual
+        new AlertDialog.Builder(this, R.style.Theme_RevisaAi_Dialog)
                 .setTitle("Excluir Deck")
                 .setMessage("Tem certeza que deseja excluir o deck '" + deck.getName() + "'? Todos os flashcards dele serão perdidos.")
                 .setPositiveButton("Excluir", (dialog, which) -> {
@@ -177,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements DeckAdapter.OnIte
                     loadDecks();
                 })
                 .setNegativeButton("Cancelar", null)
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(android.R.drawable.ic_dialog_alert) // Ícone de alerta padrão
                 .show();
     }
 

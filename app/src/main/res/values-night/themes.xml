@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Tema Base do Aplicativo -->
     <style name="Theme.RevisaAi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -15,6 +16,33 @@
         <!-- Cor da Barra de Status -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
+        <!-- Estilo para Diálogos -->
+        <item name="alertDialogTheme">@style/Theme.RevisaAi.Dialog</item>
+
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- Estilo Específico para Diálogos -->
+    <style name="Theme.RevisaAi.Dialog" parent="Theme.MaterialComponents.Dialog.Alert">
+        <!-- Fundo do Diálogo -->
+        <item name="android:windowBackground">@color/background_dark_app</item>
+        <!-- Cor do Título do Diálogo -->
+        <item name="android:textColorAlertDialogListItem">@color/white</item>
+        <!-- Cor do Título do Diálogo (geral) -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Cor dos botões do Diálogo -->
+        <item name="buttonBarPositiveButtonStyle">@style/AlertDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/AlertDialogButton</item>
+        <!-- Cor do divisor do título (se houver) -->
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+    </style>
+
+    <style name="AlertDialogButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/orange_accent</item>
+    </style>
+
+    <style name="DialogWindowTitle" parent="Base.DialogWindowTitle.AppCompat">
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>
+    
